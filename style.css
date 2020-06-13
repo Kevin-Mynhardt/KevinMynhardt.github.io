@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css?family=Gentium+Basic|Playfair+Display+SC|Bangers|Lobster');
+
+html, body 
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body 
+{
+	width:100%;
+	height: 100vh;
+	background: url(background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  	background-attachment: fixed;
+	display: table;
+	background-color: rgba(100,119,122,0.5);
+	
+}
+
+.logo
+{
+	width:200px;
+	height:95px;
+	float:right;
+	position:fixed;
+	top:0%;
+}
+
+.navi
+{
+	position: fixed;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	width:100%;
+	height: 80px;
+	border-bottom: 1px solid rgba(66,79,81,0.5);
+	font-family: 'Bangers', cursive;
+	background-color: rgba(100,119,122,0.5);
+	z-index:1;
+}
+
+.logo
+{
+	letter-spacing: 1px;
+	float: left;
+	color: #fff;
+	font-size:40px;
+	line-height: 80px;
+	padding: 0 2em;
+}
+
+.menu
+{
+	float: right;
+	line-height:80px;
+	font-size: 30px;
+	margin: 0 3em;
+	display: flex;
+
+}
+
+.menu nav
+{
+	transition:0.5s;
+}
+
+.menu nav a 
+{
+	text-decoration: none;
+	color: #fff;
+	font-weight: lighter;
+	padding: 0 20px;
+	display: inline-block;
+	position: relative;
+	transition:0.3s;
+	/*text-transform:uppercase;*/
+	
+}
+
+
+.menu:hover nav a
+{
+	transform: scale(1.3);
+	opacity:0.7;
+	filter: blur(2px);
+	
+}	
+
+.menu nav a:hover
+{
+	transform: scale(1.8);
+	opacity:1;
+	filter: blur(0);
+	
+}	
+
+.head
+{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	text-align:center;
+	color:#fff;
+}
+
+.head h1
+{
+	font-family: 'Lobster', cursive;
+	font-weight: 400;
+	font-size: 120px;
+	margin-bottom:8px;
+}
+
+.head p
+{
+	font-family: 'Bangers', cursive;
+	font-size: 40px;
+	font-weight: lighter;
+}
+
+
+
+.search-box
+{
+	position:absolute;
+	top:50%;
+	left:10%;
+	float:left;
+	transform: translate(-50%,-50%);
+	background:rgba(66,79,81,0.95);
+	height:40px;
+	border-radius:40px;
+	padding:10px;
+}
+
+.search-btn
+{
+	float:right;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	background:rgba(66,79,81,0.95);
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-icon
+{
+	width:32px;
+	height:30px;
+}
+
+.search-txt
+{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding:0;
+	color:white;
+	font-size:20px;
+	transition:0.4s;
+	line-height:40px;
+	width:0px;
+}
+
+.search-box:hover > .search-txt
+{
+	width:250px;
+	padding: 0 6px;
+}
+
+.search-box:hover > .search-btn
+{
+	background: white;
+}
+
+.bigger .card
+{
+	width:750px;
+	height:1050px;
+}
+
+.bigger .card .poster
+{
+	width:750px;
+	height:1050px;
+}
+
+
+.card
+{
+	/*position:absolute;
+	top:50%;
+	left:50%;*/
+	transform: translate(-50%,-50%);
+	width:375px;
+	height:525px;
+	transform-style: preserve-3d;
+	perspective:600px;
+	transition:0.5s;
+	/*background:rgba(93,188,210,0.75);
+	border: 2px solid rgba(93,188,210,0.95);*/
+}
+
+.card .front-card
+{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+	transition: 0.5s;
+	background:rgba(93,188,210,1);
+	
+}
+
+.card .back-card
+{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+	transition: 0.5s;
+	background:rgba(2,20,22,0.98);
+	
+}	
+
+.card .back-card:before
+{
+	content:'';
+	position:absolute;
+	width:50%;
+	height:100%;
+	top:0;
+	/*left:-50%;*/
+	background-color:rgba(255,255,255,0.1);
+}
+
+.poster
+{
+	width:375px;
+	height:525px;
+}
+
+.card:hover .front-card
+{
+	transform: rotateX(-180deg);
+}
+
+.card:hover .back-card
+{
+	transform: rotateX(0deg);
+}
+
+.bottomimage
+{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middleimage
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topimage
+{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table
+{
+	position:absolute;
+	/*align:center;*/
+	width:100;
+	top:40%;
+	left:19%;
+	padding:5px;
+}
+
+.table table
+{
+	left:50%;
+	width:100%;
+}
+
+.details
+{
+	color:#fff;
+	text-align:center;
+	font-family: 'Gentium Basic', serif;
+	font-size:25px;
+}
+
+.details h2
+{
+	text-transform:uppercase;
+	font-family: 'Playfair Display SC', serif;
+	font-size:35px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
